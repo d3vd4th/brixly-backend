@@ -1,20 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "index.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "builds": [
     {
-      "src": "index.ts",
+      "src": "server.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.ts"
+      "dest": "/server.ts"
     }
   ]
 }
